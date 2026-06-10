@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezhin 🤍</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(145deg, #0b0314, #18113c, #2c1654);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* دروستکردنی ئەستێرەی بچووک لە باکگراوند بۆ دیمەنێکی ڕۆمانسی */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px);
+            background-size: 550px 550px, 350px 350px;
+            background-position: 0 0, 40px 60px;
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        .rain-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .drop {
+            position: absolute;
+            top: -60px;
+            color: #ffffff;
+            font-weight: 600;
+            white-space: nowrap;
+            letter-spacing: 1px;
+            animation: fall linear infinite;
+            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+            user-select: none;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0
